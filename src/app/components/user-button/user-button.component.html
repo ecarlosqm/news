@@ -1,9 +1,11 @@
 <div class="user-container">
     <div class="dropdown-container">
-        <button class="dropdown-btn" (click)="togleShowMenu()">
-            <span class="user-email">krlos.qm@gmail.com</span>
-            <img src="https://www.w3schools.com/howto/img_avatar2.png" class="profile-image">
-        </button>
+        <div *ngIf="currentUser != undefined">
+            <button class="dropdown-btn" (click)="togleShowMenu()">
+                <span class="user-email">{{currentUser.email.value}}</span>
+                <img src="https://www.w3schools.com/howto/img_avatar2.png" class="profile-image">
+            </button>
+        </div>
         <div id="myDropdown" [ngClass]="{show: showMenu}" class="dropdown-options">
             <a class="dropdown-option" (click)="closeSession()">Cerrar sesión</a>
         </div>

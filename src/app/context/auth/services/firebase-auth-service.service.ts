@@ -6,13 +6,14 @@ import { AngularFireAuth } from "@angular/fire/auth";
 import { User } from "@firebase/auth-types";
 
 //RXJS
-import { Observable } from 'rxjs';
+import { Observable, from } from 'rxjs';
 import { map, first,  } from 'rxjs/operators';
 import { Email } from '../domain/email';
 import { Password } from '../domain/password';
 import { AutenticatedUser } from '../domain/authenticated_user';
 import { UserAuthId } from '../domain/user_auth_id';
 import { auth } from 'firebase';
+
 
 @Injectable()
 export class FirebaseAuthService implements AuthService {
@@ -26,8 +27,9 @@ export class FirebaseAuthService implements AuthService {
     return firebaseUser.uid;
   }
 
-  currentUser(): Observable<AutenticatedUser|null>{
-    return this.firebaseAuth.user.pipe(map((user: User) => user ? new AutenticatedUser(new UserAuthId(user.uid), new Email(user.email)) : null));
+  async currentUser(): Promise<AutenticatedUser|null>{
+    const firebaseUser :User= await this.firebaseAuth.currentUser;
+    return firebaseUser ? new AutenticatedUser(new UserAuthId(firebaseUser.uid), new Email(firebaseUser.email)) : null;
   }
 
   async userIsAuthenticated(): Promise<boolean> {

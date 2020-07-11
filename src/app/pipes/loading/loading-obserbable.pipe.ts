@@ -26,11 +26,7 @@ export class LoadingObserbablePipe implements PipeTransform {
 
     }
 
-    console.error('promise')
-
-
     if(isPromise(val)){
-      console.error('promise')
       return from(val).pipe(
         map((value: any) => ({
           loading: value === null,

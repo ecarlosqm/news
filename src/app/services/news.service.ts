@@ -12,7 +12,7 @@ interface DropdownOption { value: string, label: string }
 )
 export class NewsService {
 
-  private _currentNewsSources: NewsSource[] = [];
+  private _currentNewsSources: NewsSource[];
   private _newsSourcesSubject: BehaviorSubject<NewsSource[]> = new BehaviorSubject<NewsSource[]>(this._currentNewsSources);
   private _currentPage: number = 1;
   private _currentPageSize: number = 20;

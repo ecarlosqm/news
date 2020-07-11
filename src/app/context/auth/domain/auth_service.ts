@@ -10,6 +10,6 @@ export abstract class AuthService {
     abstract logging(email: Email, password: Password): Promise<void>;
     abstract logout(): Promise<void>;
     abstract userId():Promise<string>;
-    abstract currentUser(): Observable<AutenticatedUser|null>
+    abstract currentUser(): Promise<AutenticatedUser|null>
     abstract userIsAuthenticated():Promise<boolean>;
 }

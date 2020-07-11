@@ -1,6 +1,5 @@
 <div class="cards-scroll-container">
     <div class="container-lg cards-container">
-
         <ng-container *ngIf="myNewsArray | loadingObserbable | async as myNewsArray">
             <ng-template [ngIf]="!myNewsArray.loading ">
                 <div class="row no-gutters-sm mt-3">
