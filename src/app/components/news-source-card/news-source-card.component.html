@@ -1,0 +1,16 @@
+<div class="app-card">
+    <button class="save-btn" *ngIf="!saved" (click)="addToMyNews()">
+        <i class="fas fa-bookmark"></i>
+    </button>
+    <button class="save-btn" *ngIf="saved">
+        <i class="fas fa-check-circle"></i>
+    </button>
+    <a href={{urlSource}} target="_blank">
+        <img src={{imageUrl}} onerror="this.src = this.src='./assets/image-placeholder.png'" class="image">
+        <div class="details">
+            <h3 class="title">{{title}}</h3>
+            <p class="date">Publicado: {{date}}</p>
+            <p class="author">Por: {{author}}</p>
+        </div>
+    </a>
+</div>

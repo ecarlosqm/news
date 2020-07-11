@@ -1,0 +1,66 @@
+.image {
+    max-height: 200px;
+    min-width: 100%;
+}
+
+.details{
+    padding: 12px 16px;
+}
+
+.app-card{
+  height: 100%;
+}
+
+.title{
+    margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3a3a3a;
+}
+
+.save-btn{
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  height: 40px;
+  width: 40px;
+  display: block;
+  background: rgba(0, 0, 0, 0.521);
+  border: none;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.767);
+  border-radius: 4px;
+}
+
+.save-btn.saved{
+  background: #0c3c4a;
+  color: rgba(255, 255, 255, 0.767);
+
+
+}
+
+.date{
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3a3a3a;
+}
+
+.author{
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #999999
+  ;
+  margin-bottom: 0;
+}

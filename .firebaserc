@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "news-dfa82": {
+      "hosting": {
+        "news": [
+          "news-dfa82"
+        ]
+      }
+    }
+  }
+}

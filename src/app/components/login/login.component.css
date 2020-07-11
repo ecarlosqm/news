@@ -1,0 +1,9 @@
+.create-acount-link a{
+    color: #3d636e;
+    font-size: 15px;
+}
+
+.create-acount-link{
+    text-align: right;
+    margin: 15px 0;
+}

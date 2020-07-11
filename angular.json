@@ -24,9 +24,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/normalize.css/normalize.css",
+              "./node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+              "./src/icons/fontawesome/css/all.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -117,8 +124,16 @@
               "devServerTarget": "news:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "news"
+    }
+  },
+  "defaultProject": "news",
+  "cli": {
+    "analytics": false
+  }
 }

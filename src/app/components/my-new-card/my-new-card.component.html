@@ -1,0 +1,17 @@
+<div class="app-card">
+    <button class="save-btn" (click)="delete()">
+        <ng-container *ngIf="!waitingDelete">
+            <i class="fas fa-trash"></i>
+        </ng-container>
+        <ng-container *ngIf="waitingDelete">
+            <i class="fas fa-spinner"></i>
+        </ng-container>
+    </button>
+    <a href={{urlSource}} target="_blank">
+        <img src={{imageUrl}} onerror="this.src = this.src='./assets/image-placeholder.png'"
+            class="image">
+        <div class="details">
+            <h3 class="title">{{title}}</h3>
+        </div>
+    </a>
+</div>

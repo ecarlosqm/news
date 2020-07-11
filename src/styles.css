@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: OpenSans;
+    src: url(assets/fonts/Open_Sans/OpenSans-Regular.ttf) format("opentype");
+    font-weight: normal;
+  }
+
+
+  @font-face {
+    font-family: Montserrat;
+    src: url(assets/fonts/Montserrat-Medium.ttf) format("opentype");
+    font-weight: 700;
+  }
+
+  
+  @font-face {
+    font-family: Montserrat;
+    src: url(assets/fonts/Montserrat-Bold.ttf) format("opentype");
+    font-weight: 900;
+  }
+
+body {
+    font-family: Montserrat;
+}
+
+form input {
+    color: rgb(51, 51, 51);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+    background-color: white;
+    display: block;
+    font-weight: 400;
+    width: 100%;
+    -webkit-appearance: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.form-group input:focus {
+    outline: none !important;
+    outline-offset: 5px;
+    border-color: rgb(0, 157, 228);
+}
+
+.form-group input.ng-invalid.ng-dirty {
+    outline: none !important;
+    outline-offset: 5px;
+    border: 1px solid #a94442;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+button:focus{
+    outline: none;
+}
+
+.btn {
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+    color: white;
+    border: none;
+    border-width: 0px;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: calc(11px - 0.1ex) 28px calc(11px + 0.1ex);
+    background: #0c3c4a;
+    transition-duration: .03s;
+}
+
+button:disabled {
+    background: rgb(246, 246, 246);
+    color: rgb(153, 153, 153)
+}
+
+.input-error {
+    margin-bottom: 1rem;
+    color: #f05545;
+}
+
+.app-card {
+    border-radius: 12px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+    overflow: hidden;
+}

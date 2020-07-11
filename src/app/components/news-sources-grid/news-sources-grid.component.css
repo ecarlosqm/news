@@ -1,0 +1,15 @@
+.grid-wraper{
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.grid>* {
+    width: 100%;
+}
+

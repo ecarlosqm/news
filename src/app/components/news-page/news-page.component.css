@@ -1,0 +1,11 @@
+.message{
+    padding: 10px;
+    background-color: #e2e3e5;
+    margin: auto;
+    color: #686868;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    cursor: pointer;
+}

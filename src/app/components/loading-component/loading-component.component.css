@@ -1,0 +1,16 @@
+.spin{
+    display: block;
+    animation:spin 1s linear infinite;
+}
+
+.spin-container{
+    margin-top: 20px;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    font-size: 30px;
+    color: #0c3c4a;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

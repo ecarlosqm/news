@@ -1,0 +1,9 @@
+<div class="search-panel">
+    <ng-select [items]="countries" [searchable]='false' placeholder='Pais' (change)="onSelectCountry($event)" class="countries" [(ngModel)]="currentCountry" [clearable]="false" >
+    </ng-select>
+
+    <ng-select [items]="categories" [searchable]='false' placeholder="Categoria" (change)="onSelectCategory($event)" class="categorias"  [(ngModel)]="currentCategory" [clearable]="false">
+    </ng-select>
+
+    <button class="btn search-btn" [routerLink]="['../newsPage',{relativeTo: this.activatedRoute.parent}]" routerLinkActive="router-link-active" >Listo</button>
+</div>

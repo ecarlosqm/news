@@ -1,0 +1,12 @@
+<div [hidden]="closeMessage" *ngIf="showLocalDataMesage" class="message" (click)="closeLocalDataMesage()">
+    Noticias de prueba <i class="fas fa-times-circle"></i> 
+</div>
+
+<ng-container *ngIf="newsSources | loadingObserbable | async as newsSource">
+    <ng-template [ngIf]="!newsSource.loading ">
+        <app-news-sources-grid [newsSources]="newsSource.value" (onGetDown)="fetchNext($event)"></app-news-sources-grid>
+    </ng-template>
+    <ng-template [ngIf]="newsSource.loading">
+        <app-loading-component></app-loading-component>
+    </ng-template>
+</ng-container>

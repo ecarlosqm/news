@@ -1,0 +1,9 @@
+<div class="grid-wraper" #grid>
+    <div class="container-lg">
+        <div class="grid row no-gutters-sm mt-3" >
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 mb-4" *ngFor="let newsSource of newsSources">
+                <app-news-source-card [newsSource]="newsSource"></app-news-source-card>
+            </div>
+        </div>
+    </div>
+</div>

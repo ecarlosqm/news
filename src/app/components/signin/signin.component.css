@@ -1,0 +1,9 @@
+.login-link a{
+    color: #3d636e;
+    font-size: 15px;
+}
+
+.login-link{
+    text-align: right;
+    margin: 15px 0;
+}

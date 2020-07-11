@@ -1,0 +1,21 @@
+<div class="app-container">
+    <app-topbar class="topbar"></app-topbar>
+    <div class="app-grid sections">
+        <div class="controls-section container-lg">
+            <div class="search-section">
+                <app-search-panel class="desktop-search"></app-search-panel>
+            </div>
+            <div class="navbar">
+                <app-navbar></app-navbar>
+            </div>
+        </div>
+        <div class="content-section" #contentSection>
+            <div class="page-wraper">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        <div class="mobile-navbar">
+            <app-navbar></app-navbar>
+        </div>
+    </div>
+</div>

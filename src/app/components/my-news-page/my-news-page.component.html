@@ -1,0 +1,18 @@
+<div class="cards-scroll-container">
+    <div class="container-lg cards-container">
+
+        <ng-container *ngIf="myNewsArray | loadingObserbable | async as myNewsArray">
+            <ng-template [ngIf]="!myNewsArray.loading ">
+                <div class="row no-gutters-sm mt-3">
+                    <div *ngFor="let myNews of  myNewsArray.value" class="col-xs-12 col-sm-6 col-lg-4 mb-4">
+                        <app-my-new-card [myNews]='myNews'></app-my-new-card>
+                    </div>
+                </div>
+
+            </ng-template>
+            <ng-template [ngIf]="myNewsArray.loading">
+                <app-loading-component></app-loading-component>
+            </ng-template>
+        </ng-container>
+    </div>
+</div>
