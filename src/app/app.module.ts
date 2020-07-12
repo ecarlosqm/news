@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,6 +33,12 @@ import { UserButtonComponent } from './components/user-button/user-button.compon
 import { TryAgainComponent } from './components/try-again/try-again.component';
 import { LoadingObserbablePipe } from './pipes/loading/loading-obserbable.pipe';
 import { LoadingComponentComponent } from './components/loading-component/loading-component.component';
+
+import mxLocal from '@angular/common/locales/es-MX'
+import { registerLocaleData } from '@angular/common';
+
+
+registerLocaleData(mxLocal, 'es');
 
 @NgModule({
   declarations: [
@@ -77,6 +83,7 @@ import { LoadingComponentComponent } from './components/loading-component/loadin
       provide: MyNewsService,
       useClass: MyNewsFirestoreService
     },
+    { provide: LOCALE_ID, useValue: 'es' } 
   ],
   bootstrap: [AppComponent]
 })

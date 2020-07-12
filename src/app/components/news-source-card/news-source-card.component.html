@@ -9,7 +9,7 @@
         <img src={{imageUrl}} onerror="this.src = this.src='./assets/image-placeholder.png'" class="image">
         <div class="details">
             <h3 class="title">{{title}}</h3>
-            <p class="date">Publicado: {{date}}</p>
+            <p class="date">Publicado: {{date | date : "dd MMMM yyyy" | titlecase }} </p>
             <p class="author">Por: {{author}}</p>
         </div>
     </a>
