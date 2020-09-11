@@ -9,7 +9,7 @@ import { NewsService } from 'src/app/services/news.service';
   templateUrl: './news-sources-grid.component.html',
   styleUrls: ['./news-sources-grid.component.css']
 })
-export class NewsSourcesGridComponent implements OnChanges, OnInit {
+export class NewsSourcesGridComponent {
 
   @Input() newsSources: NewsSource[];
   @Output() onGetDown: EventEmitter<void> = new EventEmitter<void>();
@@ -17,13 +17,6 @@ export class NewsSourcesGridComponent implements OnChanges, OnInit {
 
   constructor(private newsService:NewsService) { }
 
-  ngOnInit(): void {
-    this.assertNewsSourcesNotNull();
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    this.assertNewsSourcesNotNull();
-  }
 
   assertNewsSourcesNotNull(): void {
     if (this.newsSources == null || this.newsSources == undefined) {

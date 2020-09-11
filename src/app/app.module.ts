@@ -77,7 +77,7 @@ registerLocaleData(mxLocal, 'es');
     },
     {
       provide: NewsSourceService,
-      useClass: environment.newsServiceClass
+      useClass: NewsSourceNewsApiService
     },
     {
       provide: MyNewsService,

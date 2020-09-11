@@ -29,8 +29,7 @@ export class NewsPageComponent implements OnInit {
   }
 
   get showLocalDataMesage(){
-    if(this.closeMessage) return false;
-    return environment.newsServiceClass.name ==  NewsSourceInMemoryService.name;
+     return false;
   }
 
   closeLocalDataMesage(){
